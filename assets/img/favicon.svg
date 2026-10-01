@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#00B8E0"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#061A2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#bg)"/>
+  <text x="32" y="44" font-family="Arial, sans-serif" font-size="40" font-weight="900" 
+        text-anchor="middle" fill="url(#text)">S</text>
+  <!-- SEO search ring -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="white" stroke-width="1" opacity="0.3"/>
+</svg>

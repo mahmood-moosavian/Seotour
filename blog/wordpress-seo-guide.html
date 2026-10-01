@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>راهنمای کامل سئو وردپرس از صفر تا صد | آموزش جامع - سئو تور</title>
+    <meta name="description" content="راهنمای جامع سئو وردپرس در ۲۰۲۵: تنظیمات اولیه، Yoast vs Rank Math، بهینه‌سازی سرعت، Core Web Vitals، سئو ووکامرس، امنیت و افزونه‌های ضروری.">
+    <meta name="keywords" content="سئو وردپرس, Yoast SEO, Rank Math, سئو ووکامرس, افزونه سئو وردپرس, بهینه‌سازی وردپرس, Core Web Vitals وردپرس, سرعت وردپرس">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="تیم سئو تور">
+    <link rel="canonical" href="https://seotour.ir/blog/wordpress-seo-guide.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://seotour.ir/blog/wordpress-seo-guide.html">
+    <meta property="og:title" content="راهنمای کامل سئو وردپرس از صفر تا صد">
+    <meta property="og:description" content="آموزش جامع سئو وردپرس: تنظیمات، افزونه‌ها، سرعت، ووکامرس و امنیت.">
+    <meta property="og:site_name" content="سئو تور">
+    <meta property="og:locale" content="fa_IR">
+    <meta property="article:published_time" content="2024-11-30T08:00:00+03:30">
+    <meta property="article:author" content="تیم سئو تور">
+    <meta property="article:section" content="وردپرس">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="راهنمای کامل سئو وردپرس از صفر تا صد">
+    <meta name="twitter:description" content="آموزش جامع سئو وردپرس: تنظیمات، افزونه‌ها، سرعت، ووکامرس و امنیت.">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "راهنمای کامل سئو وردپرس از صفر تا صد",
+      "description": "آموزش جامع سئو وردپرس شامل تنظیمات اولیه، افزونه‌ها، بهینه‌سازی سرعت، Core Web Vitals، سئو ووکامرس و امنیت.",
+      "author": {
+        "@type": "Organization",
+        "name": "تیم سئو تور",
+        "url": "https://seotour.ir/about.html"
+      },
+      "datePublished": "2024-11-30T08:00:00+03:30",
+      "dateModified": "2024-11-30T08:00:00+03:30",
+      "image": "https://seotour.ir/assets/img/articles/wordpress-seo-guide.svg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "سئو تور",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://seotour.ir/assets/img/favicon.svg"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://seotour.ir/blog/wordpress-seo-guide.html"
+      },
+      "articleSection": "وردپرس",
+      "inLanguage": "fa-IR"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "خانه",
+          "item": "https://seotour.ir/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "بلاگ",
+          "item": "https://seotour.ir/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "راهنمای کامل سئو وردپرس از صفر تا صد",
+          "item": "https://seotour.ir/blog/wordpress-seo-guide.html"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <a href="#main" class="skip-link">پرش به محتوای اصلی</a>
+
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="logo">
+                    <span class="logo__icon">S</span>
+                    <span class="logo__text">
+                        <span>سئو تور</span>
+                        <span>SEOTOUR.IR</span>
+                    </span>
+                </a>
+                <nav class="nav" role="navigation">
+                    <ul class="nav__links">
+                        <li><a href="/" class="nav__link">خانه</a></li>
+                        <li><a href="/services.html" class="nav__link">خدمات</a></li>
+                        <li><a href="/about.html" class="nav__link">درباره ما</a></li>
+                        <li><a href="/blog.html" class="nav__link active">بلاگ</a></li>
+                        <li><a href="/contact.html" class="nav__link">تماس</a></li>
+                    </ul>
+                    <a href="/contact.html" class="btn btn--primary">درخواست مشاوره رایگان</a>
+                </nav>
+                <button class="mobile-toggle" aria-label="منو"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="breadcrumbs">
+            <div class="container">
+                <ol class="breadcrumbs__list">
+                    <li><a href="/">خانه</a></li>
+                    <li><a href="/blog.html">بلاگ</a></li>
+                    <li>راهنمای کامل سئو وردپرس از صفر تا صد</li>
+                </ol>
+            </div>
+        </div>
+
+        <article class="article">
+            <div class="container">
+                <header class="article__header">
+                    <span class="article__category">وردپرس</span>
+                    <h1 class="article__title">راهنمای کامل سئو وردپرس از صفر تا صد</h1>
+                    <div class="article__meta">
+                        <span>۱۰ آذر ۱۴۰۳</span>
+                        <span>•</span>
+                        <span>۱۲ دقیقه مطالعه</span>
+                        <span>•</span>
+                        <span>تیم سئو تور</span>
+                    </div>
+                </header>
+
+                <div class="article__hero">
+                    <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" style="width:100%; height:100%;">
+                        <defs>
+                            <linearGradient id="heroGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#061A2E"/>
+                                <stop offset="100%" stop-color="#1B3A5C"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="1200" height="400" fill="url(#heroGrad2)"/>
+                        <rect x="500" y="120" width="200" height="160" fill="none" stroke="#00D4FF" stroke-width="2" rx="8"/>
+                        <circle cx="600" cy="170" r="22" fill="none" stroke="#00D4FF" stroke-width="2"/>
+                        <text x="600" y="178" text-anchor="middle" fill="#00D4FF" font-size="22" font-weight="bold" font-family="Arial">W</text>
+                        <rect x="520" y="210" width="160" height="6" fill="#00D4FF" opacity="0.4"/>
+                        <rect x="520" y="225" width="120" height="6" fill="#00D4FF" opacity="0.4"/>
+                        <rect x="520" y="240" width="140" height="6" fill="#00D4FF" opacity="0.4"/>
+                        <text x="600" y="335" text-anchor="middle" fill="#00D4FF" font-size="20" font-family="Vazirmatn, sans-serif">WordPress SEO</text>
+                    </svg>
+                </div>
+
+                <div class="article__body">
+                    <p>وردپرس با سهم بیش از ۴۳ درصد از کل وب‌سایت‌های جهان، محبوب‌ترین سیستم مدیریت محتواست. یکی از دلایل اصلی این محبوبیت، سازگاری عالی وردپرس با سئو است. با این حال، وردپرس به‌تنهایی برای رتبه‌بندی در گوگل کافی نیست؛ شما باید تنظیمات درست، افزونه‌های مناسب و بهینه‌سازی‌های فنی را پیاده کنید. در این راهنمای جامع، تمام مراحل سئو وردپرس از نصب اولیه تا تکنیک‌های پیشرفته را قدم‌به‌قدم پوشش می‌دهیم.</p>
+
+                    <blockquote>وردپرس از جعبه ۳۰ تا ۴۰ درصد آماده سئو است. ۶۰ تا ۷۰ درصد بقیه به تنظیمات، افزونه‌ها و بهینه‌سازی‌های شما بستگی دارد. این راهنما کمک می‌کند آن ۶۰ تا ۷۰ درصد را به‌درستی پیاده کنید.</blockquote>
+
+                    <h2>۱. تنظیمات اولیه وردپرس</h2>
+                    <p>قبل از نصب هر افزونه‌ای، باید تنظیمات پیش‌فرض وردپرس را بهینه کنید. اولین و مهم‌ترین کار، تنظیم Permalink است. به مسیر «تنظیمات → پیوندها» بروید و گزینه «نام نوشته» (Post Name) را انتخاب کنید. این کار باعث می‌شود URL صفحات شما به‌جای <code>?p=123</code> به‌صورت <code>/blog/wordpress-seo-guide</code> در بیاید که هم سئو‌فرندلی‌تر است و هم برای کاربر خواناتر.</p>
+
+                    <p>در بخش «تنظیمات → خواندن» باید مطمئن شوید گزینه «جلوگیری از ایندکس شدن سایت توسط موتورهای جستجو» غیرفعال است. این گزینه اغلب در سایت‌های در حال توسعه فعال می‌ماند و فراموش می‌شود. در همین بخش، تعداد پست‌های صفحه اصلی را روی ۱۰ تنظیم کنید تا سرعت بارگذاری بالا برود. همچنین اگر سایت شما تک‌نویسنده است، در بخش «تنظیمات → گفتگوها»، گزینه نظرات روی لینک‌های پیوست (pingback و trackback) را غیرفعال کنید تا از اسپم و حملات DDoS جلوگیری شود.</p>
+
+                    <p>در بخش «تنظیمات → حریم خصوصی» یک صفحه حریم خصوصی بسازید و آن را به وردپرس معرفی کنید. این کار هم از نظر قانونی (قانون GDPR و قانون جرایم رایانه‌ای ایران) لازم است و هم از نظر سئو، اعتماد گوگل را جلب می‌کند. در نهایت، در بخش «تنظیمات → عمومی»، عنوان سایت و معرفی کوتاه را با کلمه کلیدی اصلی بنویسید. این موارد در نوار عنوان مرورگر و متاتگ‌ها استفاده می‌شوند.</p>
+
+                    <h2>۲. انتخاب قالب سئو‌فرندلی</h2>
+                    <p>قالب وردپرس زیربنای سئو شماست. یک قالب بد می‌تواند تمام تلاش‌های سئو شما را بی‌اثر کند. قالب باید سبک، سریع، واکنش‌گرا (Responsive) و کدنویسی تمیز داشته باشد. از قالب‌های پر از افکت‌های بصری، اسلایدرهای سنگین و انیمیشن‌های غیرضروری پرهیز کنید. هر کیلوبایت اضافی، از سرعت سایت می‌کاهد.</p>
+
+                    <h3>معیارهای قالب سئو‌فرندلی</h3>
+                    <ul>
+                        <li><strong>سرعت بارگذاری:</strong> دمو قالب را در PageSpeed Insights تست کنید؛ نمره باید حداقل ۸۰ باشد.</li>
+                        <li><strong>کد معتبر W3C:</strong> HTML و CSS قالب باید بدون خطا باشند.</li>
+                        <li><strong>سازگاری با موبایل:</strong> قالب باید Mobile-Friendly باشد.</li>
+                        <li><strong>Schema Markup داخلی:</strong> قالب‌های مدرن Schema را به‌صورت پیش‌فرض دارند.</li>
+                        <li><strong>به‌روزرسانی منظم:</strong> قالب باید حداقل هر سه ماه به‌روز شود.</li>
+                        <li><strong>پشتیبانی از RTL:</strong> برای سایت‌های فارسی ضروری است.</li>
+                    </ul>
+
+                    <p>از قالب‌های پیشنهادی و سئو‌فرندلی می‌توان به GeneratePress، Astra، Kadence، Blocksy و OceanWP اشاره کرد. این قالب‌ها سبک هستند (کمتر از ۱۰ کیلوبایت CSS)، با Gutenberg سازگارند و نسخه رایگان هم دارند. قالب‌های پریمیوم مانند Avada و Enfold ممکن است امکانات زیادی داشته باشند اما سرعت را به‌شدت پایین می‌آورند. اگر قالبی انتخاب می‌کنید که از Page Builderهایی مانند Elementor یا WPBakery استفاده می‌کند، حتماً نسخه بهینه آن را نصب کنید و از ویجت‌های کمتر استفاده کنید.</p>
+
+                    <h2>۳. مقایسه Yoast SEO vs Rank Math</h2>
+                    <p>دو افزونه سئو غالب در وردپرس، Yoast SEO و Rank Math هستند. هر دو کار اصلی را انجام می‌دهند: متاتگ‌ها، Sitemap، Schema، Breadcrumbs و تحلیل محتوا. اما تفاوت‌های مهمی دارند که باید قبل از انتخاب بدانید.</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ویژگی</th>
+                                <th>Yoast SEO</th>
+                                <th>Rank Math</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>قیمت نسخه رایگان</td>
+                                <td>محدود</td>
+                                <td>گسترده</td>
+                            </tr>
+                            <tr>
+                                <td>تعداد Schema در رایگان</td>
+                                <td>۳ نوع</td>
+                                <td>۱۳+ نوع</td>
+                            </tr>
+                            <tr>
+                                <td>تحلیل کلمه کلیدی</td>
+                                <td>۱ کلمه</td>
+                                <td>چند کلمه</td>
+                            </tr>
+                            <tr>
+                                <td>اتصال به Search Console</td>
+                                <td>فقط پریمیوم</td>
+                                <td>رایگان</td>
+                            </tr>
+                            <tr>
+                                <td>رابط کاربری</td>
+                                <td>ساده</td>
+                                <td>پیچیده‌تر اما کامل‌تر</td>
+                            </tr>
+                            <tr>
+                                <td>بهینه‌سازی سرعت</td>
+                                <td>خوب</td>
+                                <td>عالی</td>
+                            </tr>
+                            <tr>
+                                <td>پشتیبانی از RTL</td>
+                                <td>خوب</td>
+                                <td>خوب</td>
+                            </tr>
+                            <tr>
+                                <td>قیمت نسخه پریمیوم سالانه</td>
+                                <td>۹۹ یورو</td>
+                                <td>۵۹ دلار</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>تیم سئو تور برای اکثر پروژه‌ها Rank Math را توصیه می‌کند، زیرا در نسخه رایگان امکانات بیشتری دارد و گزینه مقرون‌به‌صرفه‌تری است. اما اگر سایت شما قبلاً با Yoast ساخته شده و مشکلی ندارد، نیازی به مهاجرت نیست. توجه کنید که هرگز Yoast و Rank Math را هم‌زمان فعال نکنید؛ این کار باعث تداخل و خرابی می‌شود.</p>
+
+                    <h2>۴. بهینه‌سازی سرعت وردپرس</h2>
+                    <p>سرعت یکی از مهم‌ترین فاکتورهای رتبه‌بندی است و وردپرس به‌طور پیش‌فرض می‌تواند کند باشد. برای بهینه‌سازی سرعت وردپرس، چهار محور اصلی را باید پوشش دهید: Caching، CDN، بهینه‌سازی تصاویر و کاهش درخواست‌های HTTP.</p>
+
+                    <h3>افزونه‌های Caching پیشنهادی</h3>
+                    <ul>
+                        <li><strong>WP Rocket (پولی):</strong> بهترین افزونه کش با تنظیمات پیش‌فرض عالی. قیمت ۵۹ دلار در سال.</li>
+                        <li><strong>W3 Total Cache (رایگان):</strong> قدرتمند اما نیاز به تنظیمات手动 دارد.</li>
+                        <li><strong>LiteSpeed Cache (رایگان):</strong> اگر سرور شما LiteSpeed است، بهترین گزینه است.</li>
+                        <li><strong>WP Super Cache (رایگان):</strong> ساده و سبک، مناسب سایت‌های کوچک.</li>
+                    </ul>
+
+                    <p>پس از فعال‌سازی کش، باید یک CDN مانند Cloudflare (رایگان)، ArvanCloud یا CloudFront نصب کنید. CDN محتوای استاتیک سایت شما (تصاویر، CSS، JS) را در سرورهای مختلف در سراسر جهان ذخیره می‌کند و به کاربر نزدیک‌ترین سرور را می‌دهد. این کار می‌تواند سرعت بارگذاری را تا ۵۰ درصد بهبود دهد. در ایران ArvanCloud بهترین انتخاب است زیرا سرورهای داخلی دارد.</p>
+
+                    <p>برای بهینه‌سازی تصاویر از افزونه‌هایی مانند ShortPixel، Smush یا Imagify استفاده کنید. این افزونه‌ها تصاویر را به‌صورت خودکار فشرده می‌کنند و نسخه WebP می‌سازند. فرمت WebP می‌تواند حجم تصاویر را تا ۳۰ درصد نسبت به JPEG و ۸۰ درصد نسبت به PNG کاهش دهد. همچنین قابلیت Lazy Load را فعال کنید تا تصاویری که در viewport نیستند، بارگذاری نشوند.</p>
+
+                    <h2>۵. بهبود Core Web Vitals در وردپرس</h2>
+                    <p>Core Web Vitals سه معیار کلیدی گوگل برای سنجش تجربه کاربری است: LCP، INP و CLS. در وردپرس، این معیارها اغلب به‌دلیل تصاویر بزرگ، اسکریپت‌های افزونه‌ها و عدم بهینه‌سازی قالب ضعیف هستند. برای بهبود LCP، تصویر شاخص را قبل از fold قرار دهید و آن را preload کنید. همچنین از <code>loading="eager"</code> برای تصویر LCP استفاده کنید (نه lazy).</p>
+
+                    <p>برای بهبود INP، افزونه‌های غیرضروری را حذف کنید. هر افزونه JavaScript اضافه می‌کند که تعامل کاربر را کند می‌کند. ابزار Query Monitor را نصب کنید تا ببینید کدام افزونه‌ها بیشترین تأثیر منفی را دارند. برای بهبود CLS، حتماً ابعاد تصاویر (width و height) را مشخص کنید، فضای رزرو شده برای تبلیغات تعیین کنید و از فونت‌های Web-safe استفاده کنید. اگر فونت سفارشی دارید، از <code>font-display: swap</code> استفاده کنید.</p>
+
+                    <p>افزونه‌های مفید برای Core Web Vitals شامل Perfmatters، FlyingPress و WP Rocket هستند. این افزونه‌ها Delay JavaScript، Remove Unused CSS و Critical CSS را به‌صورت خودکار انجام می‌دهند. همچنین قابلیت Delay JS باعث می‌شود اسکریپت‌های غیرضروری تا تعامل کاربر بارگذاری نشوند که INP را به‌شدت بهبود می‌دهد. در نهایت، نمره سایت خود را در PageSpeed Insights و Search Console بخش Core Web Vitals پایش کنید.</p>
+
+                    <h2>۶. سئو ووکامرس</h2>
+                    <p>ووکامرس محبوب‌ترین افزونه فروشگاه‌ساز وردپرس است و سهم ۲۸ درصدی از کل فروشگاه‌های اینترنتی دارد. سئو ووکامرس تفاوت‌های مهمی با سئو وبلاگ دارد. اول، هر محصول باید عنوان، توضیحات و تصاویر منحصربه‌فرد داشته باشد. از توضیحات کوتاه و تکراری پرهیز کنید. دوم، از Schema Product استفاده کنید تا قیمت، موجودی و امتیاز محصول در نتایج جستجو نمایش داده شود. Rank Math و Yoast هر دو این Schema را پشتیبانی می‌کنند.</p>
+
+                    <p>صفحات دسته‌بندی محصول باید توضیحات کوتاه (حداقل ۲۰۰ کلمه) داشته باشند تا از نظر سئو ارزشمند باشند. از Canonical برای صفحات فیلتر شده استفاده کنید تا محتوای تکراری نسازید. همچنین URLهای فیلتر را با پارامتر <code>?orderby</code> یا <code>?filter</code> مدیریت کنید و در Search Console تنظیم کنید که گوگل فقط نسخه اصلی را ایندکس کند.</p>
+
+                    <p>صفحه پرداخت و سبد خرید را <code>noindex</code> کنید تا ایندکس نشوند. همچنین صفحات «حساب من»، «ثبت‌نام» و «تشکر از خرید» را noindex کنید. برای بهبود سرعت ووکامرس، از افزونه‌های بهینه‌سازی مخصوص مانند WooCommerce Optimizer و Cart All In One استفاده کنید. تعداد محصول در صفحه را روی ۱۲ یا ۲۴ تنظیم کنید (نه ۴۸ یا ۹۶) و از پاگینیشن به‌جای infinite scroll استفاده کنید.</p>
+
+                    <h2>۷. بهینه‌سازی دیتابیس وردپرس</h2>
+                    <p>دیتابیس وردپرس با گذشت زمان پر از داده‌های غیرضروری می‌شود: بازبینی‌های پست (Revisions)، draftهای قدیمی، spamها، transients منقضی شده و... این داده‌ها دیتابیس را سنگین می‌کنند و سرعت query را پایین می‌آورند. برای بهینه‌سازی دیتابیس از افزونه WP-Optimize استفاده کنید که می‌تواند بازبینی‌ها، نظرات spam و transients را با یک کلیک پاک کند.</p>
+
+                    <p>توصیه می‌شود تعداد بازبینی‌های هر پست را محدود کنید. در فایل <code>wp-config.php</code> این خط را اضافه کنید:</p>
+                    <pre><code>define('WP_POST_REVISIONS', 3);
+define('AUTOSAVE_INTERVAL', 300); // 5 minutes</code></pre>
+
+                    <p>این کار باعث می‌شود وردپرس فقط ۳ بازبینی برای هر پست نگه دارد و هر ۵ دقیقه یک‌بار autosave انجام دهد. همچنین افزونه Index AUTO و MySQL Tuner می‌توانند ایندکس‌های دیتابیس را بهینه کنند. اگر سایت شما بزرگ است (بیش از ۱۰ هزار پست)، از سرورهای با MariaDB 10.6+ و InnoDB استفاده کنید. همچنین قابلیت Object Cache با Redis یا Memcached را فعال کنید تا queryهای تکراری کش شوند.</p>
+
+                    <h2>۸. امنیت وردپرس و تأثیر روی سئو</h2>
+                    <p>سایت‌های هک‌شده می‌توانند به‌سرعت از نتایج جستجو حذف شوند. گوگل اگر بفهمد سایت شما بدافزار دارد، هشدار «This site may be hacked» را در نتایج نمایش می‌دهد که می‌تواند ۹۰ درصد ترافیک شما را نابود کند. امنیت وردپرس شامل چند لایه است: سرور، فایل‌های وردپرس، دیتابیس و افزونه‌ها.</p>
+
+                    <h3>اقدامات امنیتی ضروری</h3>
+                    <ul>
+                        <li>پسورد پیچیده برای کاربر admin و غیرفعال‌سازی ویرایشگر فایل از داخل پنل.</li>
+                        <li>استفاده از افزونه Wordfence یا Sucuri برای فایروال و اسکن بدافزار.</li>
+                        <li>به‌روزرسانی مداوم وردپرس، قالب و افزونه‌ها.</li>
+                        <li>حذف افزونه‌ها و قالب‌های غیرفعال.</li>
+                        <li>تغییر پیشوند جدول‌های دیتابیس از <code>wp_</code> به یک پیشوند دلخواه.</li>
+                        <li>مخفی کردن نسخه وردپرس در <code>head</code>.</li>
+                        <li>فعال‌سازی Two-Factor Authentication (با افزونه Wordfence Login Security).</li>
+                        <li>پشتیبان‌گیری منظم روزانه با افزونه UpdraftPlus.</li>
+                    </ul>
+
+                    <p>علاوه بر این، HTTP Security Headers را با افزونه Headers Security یا از طریق فایل <code>.htaccess</code> فعال کنید. این هدرها شامل X-Frame-Options، X-Content-Type-Options، Strict-Transport-Security و Content-Security-Policy هستند. گوگل این هدرها را به‌عنوان سیگنال اعتماد در نظر می‌گیرد. در نهایت، سایت خود را در Search Console بخش Security &amp; Manual Actions پایش کنید تا در صورت هک شدن، سریعاً مطلع شوید.</p>
+
+                    <h2>۹. افزونه‌های ضروری سئو وردپرس</h2>
+                    <p>علاوه بر افزونه اصلی سئو (Yoast یا Rank Math)، چند افزونه دیگر برای سئو وردپرس ضروری هستند:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>افزونه</th>
+                                <th>کاربرد</th>
+                                <th>نسخه</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rank Math / Yoast</td>
+                                <td>سئو On-Page، Schema، Sitemap</td>
+                                <td>رایگان کافی است</td>
+                            </tr>
+                            <tr>
+                                <td>WP Rocket / LiteSpeed Cache</td>
+                                <td>کش و بهینه‌سازی سرعت</td>
+                                <td>پولی/رایگان</td>
+                            </tr>
+                            <tr>
+                                <td>ShortPixel / Smush</td>
+                                <td>فشرده‌سازی تصاویر و WebP</td>
+                                <td>رایگان کافی است</td>
+                            </tr>
+                            <tr>
+                                <td>WP-Optimize</td>
+                                <td>بهینه‌سازی دیتابیس</td>
+                                <td>رایگان</td>
+                            </tr>
+                            <tr>
+                                <td>Wordfence / Sucuri</td>
+                                <td>امنیت و فایروال</td>
+                                <td>رایگان کافی است</td>
+                            </tr>
+                            <tr>
+                                <td>Redirection</td>
+                                <td>مدیریت Redirect 301</td>
+                                <td>رایگان</td>
+                            </tr>
+                            <tr>
+                                <td>Query Monitor</td>
+                                <td>عیب‌یابی و تحلیل کارایی</td>
+                                <td>رایگان</td>
+                            </tr>
+                            <tr>
+                                <td>UpdraftPlus</td>
+                                <td>پشتیبان‌گیری خودکار</td>
+                                <td>رایگان کافی است</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>توجه کنید که هر افزونه‌ای که اضافه می‌کنید، سرعت را تا حدی کاهش می‌دهد. هدف باید نصب حداکثر ۱۰ تا ۱۵ افزونه باشد و هر افزونه‌ای که استفاده نمی‌کنید را حذف کنید. افزونه‌های غیرفعال هم می‌توانند آسیب‌پذیری امنیتی ایجاد کنند، پس حذف کامل آن‌ها ضروری است.</p>
+
+                    <h2>۱۰. اشتباهات رایج سئو وردپرس</h2>
+                    <p>در سال‌ها فعالیت، اشتباهاتی را بارها در سایت‌های وردپرسی دیده‌ایم که به‌شدت به سئو آسیب می‌رسانند. آگاهی از این اشتباهات به شما کمک می‌کند از آن‌ها دوری کنید:</p>
+
+                    <ol>
+                        <li><strong>استفاده از چند افزونه سئو هم‌زمان:</strong> Yoast، Rank Math و All in One SEO را هم‌زمان فعال نکنید. این کار باعث تداخل متاتگ‌ها و Sitemap می‌شود.</li>
+                        <li><strong>عدم تنظیم Permalink:</strong> سایت‌هایی که هنوز URLهای <code>?p=123</code> دارند، سئوی ضعیفی دارند.</li>
+                        <li><strong>تصاویر بدون Alt:</strong> موتورهای جستجو نمی‌توانند تصاویر را بدون Alt درک کنند.</li>
+                        <li><strong>دسته‌بندی و تگ تکراری:</strong> اگر یک پست را هم در دسته «اخبار» و هم در تگ «اخبار» قرار دهید، محتوای تکراری می‌سازید.</li>
+                        <li><strong>نادیده گرفتن Breadcrumbs:</strong> Breadcrumbs هم برای کاربر و هم برای سئو مهم است.</li>
+                        <li><strong>تولید خودکار متا Description:</strong> متای خودکار اغلب شامل کلمه کلیدی نیست و CTR پایینی دارد.</li>
+                        <li><strong>نصب قالب‌های nulled (قفل‌شکسته):</strong> این قالب‌ها اغلب شامل بدافزار هستند.</li>
+                        <li><strong>عدم بهینه‌سازی دیتابیس:</strong> دیتابیس سنگین، سرعت کل سایت را پایین می‌آورد.</li>
+                        <li><strong>استفاده از Elementor با ویجت زیاد:</strong> هر ویجت JavaScript و CSS اضافه می‌کند.</li>
+                        <li><strong>عدم پشتیبان‌گیری:</strong> اگر سایت هک شود یا خراب شود، بدون بک‌آپ همه چیز از دست می‌رود.</li>
+                    </ol>
+
+                    <h2>چک‌لیست عملی سئو وردپرس</h2>
+                    <p>این چک‌لیست را به‌عنوان چک‌لیست ماهیانه خود نگه دارید:</p>
+
+                    <ul>
+                        <li>✅ Permalink روی Post Name تنظیم شده باشد.</li>
+                        <li>✅ فقط یک افزونه سئو (Yoast یا Rank Math) فعال باشد.</li>
+                        <li>✅ Sitemap در Search Console ارسال شده باشد.</li>
+                        <li>✅ کش فعال باشد و نمره PageSpeed حداقل ۸۰ باشد.</li>
+                        <li>✅ CDN متصل باشد.</li>
+                        <li>✅ تصاویر فشرده و فرمت WebP فعال باشد.</li>
+                        <li>✅ Lazy Load برای تصاویر فعال باشد.</li>
+                        <li>✅ افزونه امنیتی نصب و ۲FA فعال باشد.</li>
+                        <li>✅ پشتیبان‌گیری روزانه تنظیم شده باشد.</li>
+                        <li>✅ Core Web Vitals در Search Console سبز باشد.</li>
+                        <li>✅ تمام افزونه‌ها و قالب به‌روز باشند.</li>
+                        <li>✅ تصاویر دارای Alt متن باشند.</li>
+                        <li>✅ Breadcrumbs در قالب فعال باشد.</li>
+                        <li>✅ صفحات noindex مناسب (نویسنده، جستجو، تگ) تنظیم شده باشند.</li>
+                        <li>✅ دیتابیس ماهیانه بهینه‌سازی شود.</li>
+                    </ul>
+
+                    <h2>نتیجه‌گیری</h2>
+                    <p>سئو وردپرس یک فرآیند مستمر است که با تنظیمات اولیه شروع می‌شود و با بهینه‌سازی مداوم ادامه می‌یابد. در این راهنما، ده بخش اصلی سئو وردپرس را از تنظیمات اولیه تا تکنیک‌های پیشرفته ووکامرس پوشش دادیم. مهم‌ترین نکته این است که وردپرس به‌تنهایی معجزه نمی‌کند؛ شما باید بهینه‌سازی‌های فنی، انتخاب افزونه‌های درست و تولید محتوای باکیفیت را به‌طور مستمر انجام دهید. اگر این راهنما را قدم‌به‌قدم پیاده کنید، می‌توانید انتظار بهبود چشمگیر ترافیک ارگانیک سایت وردپرسی خود را در عرض سه تا شش ماه داشته باشید.</p>
+
+                    <div class="article__cta">
+                        <h3>سایت وردپرسی شما نیاز به بهینه‌سازی سئو دارد؟</h3>
+                        <p>تیم سئو تور با تجربه بیش از ۲۰۰ پروژه وردپرسی، از تنظیمات اولیه تا بهینه‌سازی پیشرفته سئو وردپرس و ووکامرس را برای شما انجام می‌دهد. اولین مشاوره کاملاً رایگان است.</p>
+                        <a href="/contact.html" class="btn btn--primary">درخواست مشاوره رایگان سئو وردپرس</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="/" class="logo">
+                        <span class="logo__icon">S</span>
+                        <span class="logo__text">
+                            <span style="color:white">سئو تور</span>
+                            <span>SEOTOUR.IR</span>
+                        </span>
+                    </a>
+                    <p class="footer__about">سئو تور، تیمی متخصص در زمینه بهینه‌سازی وب‌سایت برای موتورهای جستجو.</p>
+                </div>
+                <div>
+                    <h4 class="footer__title">خدمات</h4>
+                    <ul class="footer__links">
+                        <li><a href="/services.html">سئو فنی</a></li>
+                        <li><a href="/services.html">سئو محتوایی</a></li>
+                        <li><a href="/services.html">سئو وردپرس</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title">شرکت</h4>
+                    <ul class="footer__links">
+                        <li><a href="/about.html">درباره ما</a></li>
+                        <li><a href="/blog.html">بلاگ</a></li>
+                        <li><a href="/contact.html">تماس</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title">تماس</h4>
+                    <ul class="footer__links">
+                        <li>ایمیل: info@seotour.ir</li>
+                        <li>تلگرام: @seotour</li>
+                        <li>ساعت کاری: ۹ تا ۱۸</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div>© ۱۴۰۳ سئو تور | تمام حقوق محفوظ است.</div>
+                <div><a href="/sitemap.xml">نقشه سایت</a> • <a href="/privacy.html">حریم خصوصی</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

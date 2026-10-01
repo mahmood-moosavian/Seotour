@@ -1,0 +1,21 @@
+{
+  "name": "سئو تور - SEO Tour",
+  "short_name": "سئو تور",
+  "description": "خدمات تخصصی سئو و بهینه‌سازی وب‌سایت برای موتورهای جستجو",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0A2540",
+  "theme_color": "#00D4FF",
+  "dir": "rtl",
+  "lang": "fa-IR",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

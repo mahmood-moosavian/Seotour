@@ -1,0 +1,12 @@
+# SEOTOUR.IR - robots.txt
+# https://seotour.ir/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow sensitive paths
+Disallow: /assets/js/
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://seotour.ir/sitemap.xml
